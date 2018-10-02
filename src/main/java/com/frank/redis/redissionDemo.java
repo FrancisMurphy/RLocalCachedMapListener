@@ -10,15 +10,12 @@ import org.redisson.config.Config;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * This is test demo
- */
 @Slf4j
 public class redissionDemo {
 
     public static void main(String[] args) {
         Config config = new Config();
-        config.useSingleServer().setAddress("//YOUR REDIS HOST:PORT");
+        config.useSingleServer().setAddress("//120.78.129.109:10000");
         RedissonClient redisson = Redisson.create(config);
 
         LocalCachedMapOptions options = LocalCachedMapOptions.defaults()
